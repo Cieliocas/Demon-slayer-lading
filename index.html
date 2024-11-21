@@ -6,22 +6,45 @@
     <title>Demon Slayer: Kimetsu no Yaiba</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/main.css">
 </head>
 <body>
     <header class="hero">
-        <nav>
-            <nav class="hero__nav">
-                <div class="hero__logo">
-                    <img src="src/images/demon_logo.png" alt="Demon Slayer Logo" class="hero__logo-img">
+        <nav class="hero__nav">
+            <div class="hero__logo">
+                <img src="./src/images/demon_logo.png" alt="Demon Slayer Logo" class="hero__logo-img">
+            </div>
+            <ul class="hero__nav-links">
+                <li class="hero__nav-item">
+                    <a href="#home" class="hero__nav-link">HOME</a>
+                </li>
+                <li class="hero__nav-item">
+                    <a href="#seasons" class="hero__nav-link hero__nav-link--active">SEASONS</a>
+                </li>
+                <li class="hero__nav-item">
+                    <a href="#characters" class="hero__nav-link">CHARACTERS</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="hero__content">
+            <div class="hero__text">
+                <h1 class="hero__title">DEMON SLAYER: <span class="hero__title-highlight">KIMETSU NO YAIBA</span></h1>
+                <p class="hero__description">Tanjiro Kamado is a kind-hearted and intelligent boy who lives with his family in the mountains. he became his family's breadwinner after his father's death, traveling to the nearby village to sell charcoal. everything changed when he came home one day to discover his family was attacked and slaughtered by a demon. tanjiro and his sister nezuko were the sole survivors of the incident, with nezuko being transformed into a demon, but still surprisingly showing signs of human emotion and thought.</p>
+                <div class="hero__cta">
+                    <button class="hero__btn hero__btn--outline">
+                        <img src="camera-icon.png" alt="Camera Icon" class="hero__btn-icon"> GALLERY
+                    </button>
+                    <button class="hero__btn hero__btn--primary">
+                        <img src="play-icon.png" alt="Play Icon" class="hero__btn-icon"> WATCH
+                    </button>
                 </div>
-                <ul class="hero__nav-links">
-                    <li class="hero__nav-item"><a href="#home" class="hero__nav-link">HOME</a></li>
-                    <li class="hero__nav-item"><a href="#seasons" class="hero__nav-link hero__nav-link--active">SEASONS</a></li>
-                    <li class="hero__nav-item"><a href="#characters" class="hero__nav-link">CHARACTERS</a></li>
-                </ul>
-            </nav>
+            </div>
+            <div class="hero__image">
+                <img src="./src/images/characters.png" alt="Demon Slayer Characters" class="hero__characters-img">
+            </div>
+        </div>
     </header>
 </body>
+
 </html>
