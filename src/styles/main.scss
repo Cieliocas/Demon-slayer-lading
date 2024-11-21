@@ -9,4 +9,23 @@ $color-text: #FFFFFF;
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    color: $color-text;
+    background-color: $color-primary;
+}
 
+.hero {
+    min-height: 100vh;
+    padding: 20px;
+    background-image: linear-gradient(to bottom, rgba($color-primary, 0.5), rgba(#000000, 0.8));
+    background-size: cover;
+    background-position: center;
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+}
