@@ -1,13 +1,11 @@
 @use 'colors' as *;
 
 .characters {
-    padding: 60px 20px;
+    padding: 60px 120px;
     background-image: url('../images/tomioka_texture.png');
     background-size: contain;
-    border-top-left-radius:32px;
     border-top-right-radius:160px;
-    border-bottom-left-radius:160px;
-    border-bottom-right-radius:32px;
+    border-bottom-right-radius:160px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 
     &__title {
@@ -42,6 +40,7 @@
         align-items: center;
         justify-content: flex-end;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 8px;
+        margin-bottom: 60px;
 
         &:hover {
             transform: scale(1.05);
