@@ -90,3 +90,98 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar
 
 ## **Licença**
 Este projeto é open-source e está licenciado sob os termos da [MIT License](LICENSE).  
+
+
+
+# **Project: Landing Page - Demon Slayer**  
+
+## **Project Description**
+This project is a landing page inspired by the *Demon Slayer* series, combining modern design, interactivity, and responsiveness. The website features multiple sections, including a visually striking hero, informative cards, and interactive components like navigation and carousel.  
+
+---
+
+## **Features and Technologies**
+- **HTML5**: Well-organized semantic structure for all sections of the site.  
+- **SCSS (Sass)**: Advanced and organized styling, using features like:
+  - Variables for color control and visual consistency.  
+  - Mixins for style reuse.  
+  - File modularity for easier maintenance.  
+- **JavaScript**: Adds interactivity and dynamism to the site, including:
+  - Responsive navigation menu with visible toggle on mobile.  
+  - Dynamic project carousel using Swiper.js.  
+  - Header style change on page scroll.  
+- **Bootstrap**: Used for responsive structuring and dark mode.  
+- **BEM Methodology**: Clear and scalable CSS class organization.  
+- **Gulp.js**: Task automation, such as:
+  - SCSS to CSS compilation.  
+  - Image optimization.  
+
+---
+
+## **Functionalities**
+1. **Hero Section**:  
+   - Responsive navigation with expandable menu on mobile.  
+   - Animated title and buttons with primary and outline styles.  
+2. **Characters Section**:  
+   - Interactive cards with images, names, and hover effects.  
+   - Responsive layout for different screen sizes.  
+3. **Projects Section (Swiper.js)**:  
+   - Functional carousel with multiple projects and clickable links.  
+   - Mobile swipe support.  
+4. **Dark Mode**:  
+   - Dark theme implementation using Bootstrap only.  
+
+---
+
+## **How to Use the Project**
+1. Clone this repository:  
+   ```bash
+   git clone https://github.com/cieliocas/demon-slayer-landing-page.git
+   ```
+2. Install the project dependencies:  
+   ```bash
+   npm install
+   ```
+3. Run the local server for preview:  
+   ```bash
+   gulp
+   ```
+4. Open the `index.html` file in the browser or use *Live Server*.  
+
+---
+
+## **Directory Structure**
+```plaintext
+├── images/                     # Website images
+├── js/                         # JavaScript scripts
+│   └── main.js                 # Main scripts
+├── scss/                       # Organized SCSS files
+│   ├── _colors.scss            # Color palette
+│   ├── _hero.scss              # Hero section styling
+│   ├── _characters.scss        # Characters section styling
+│   ├── _swiper.scss            # Custom styles for the carousel
+│   └── main.scss               # General styles and imports
+├── gulpfile.js                 # Gulp.js configuration
+├── package.json                # Project configuration
+├── index.html                  # Main HTML structure
+└── README.md                   # Project documentation
+```
+
+---
+
+## **Roadmap**
+- [ ] Finalize all project links in the carousel.  
+- [ ] Add extra CSS animations for section transitions.  
+- [ ] Improve accessibility and compatibility with screen readers.  
+- [ ] Test and fix bugs in older browsers.  
+
+---
+
+## **Contributions**
+Contributions are welcome! Feel free to open issues or submit pull requests.  
+
+---
+
+## **License**
+This project is open-source and licensed under the terms of the [MIT License](LICENSE).  
+
