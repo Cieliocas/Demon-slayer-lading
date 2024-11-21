@@ -36,6 +36,15 @@
         }
     }
 
+    &__nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: $color-text;
+        cursor: pointer;
+    }
+
     &__nav-links {
         display: flex;
         list-style: none;
@@ -112,13 +121,53 @@
 
 @media (max-width: 768px) {
     .hero {
+        &__nav {
+            flex-wrap: wrap;
+            padding: 16px 32px;
+        }
+
+        &__nav-toggle {
+            display: block;
+            order: 2;
+        }
+
+        &__logo {
+            order: 1;
+        }
+
+        &__nav-links {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            order: 3;
+            margin-top: 20px;
+
+            &.show {
+                display: flex;
+            }
+        }
+
+        &__nav-item {
+            margin-left: 0;
+            margin-bottom: 10px;
+        }
+
         &__content {
-        flex-direction: column;
+            flex-direction: column;
+            padding: 40px;
         }
 
         &__text {
-        max-width: 100%;
-        margin-bottom: 30px;
+            max-width: 100%;
+            margin-bottom: 30px;
+        }
+
+        &__title {
+            font-size: 36px;
+        }
+
+        &__description {
+            font-size: 14px;
         }
     }
 }
