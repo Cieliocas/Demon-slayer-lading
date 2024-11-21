@@ -1,5 +1,6 @@
 @use 'colors';
 @use 'hero';
+@use 'characters';
 
 * {
     margin: 0;
@@ -10,6 +11,6 @@
 body {
     font-family: "Inter", sans-serif;
     color: colors.$color-text;
-    background-color: colors.$color-primary;
+    background-color: colors.$color-black;
 }
 
