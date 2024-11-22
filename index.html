@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="dist/css/main.css">
 </head>
 <body>
-    <header class="hero" id="home">
+    <header id="home" class="hero">
         <nav class="hero__nav">
             <div class="hero__logo">
                 <img src="./src/images/demon_logo.png" alt="Demon Slayer Logo" class="hero__logo-img">
@@ -19,8 +19,8 @@
                 ☰
             </button>
             <ul class="hero__nav-links">
-                <li class="hero__nav-item">
-                    <a href="#home" class="hero__nav-link hero__nav-link--active">HOME</a>
+                <li class="hero__nav-item hero__nav-item--is-active">
+                    <a href="#home" class="hero__nav-link">HOME</a>
                 </li>
                 <li class="hero__nav-item">
                     <a href="#characters" class="hero__nav-link">CHARACTERS</a>
@@ -80,10 +80,11 @@
             </div>
         </div>
     </section>
-    
 
+    <section id="seasons" class="seasons">
+        <!-- Conteúdo da seção de temporadas aqui -->
+    </section>
 
     <script src="./dist/scripts/main.js"></script>
 </body>
-
 </html>
