@@ -2,17 +2,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const heroSection = document.querySelector('.hero');
     const navbar = document.querySelector('.hero__nav');
     const navItems = document.querySelectorAll('.hero__nav-item');
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('section, .hero');
     const alturaHero = heroSection.clientHeight;
 
     const navToggle = document.querySelector('.hero__nav-toggle');
     const navLinks = document.querySelector('.hero__nav-links');
 
     function setActiveNavItem() {
-        const scrollPosition = window.scrollY;
+        const scrollPosition = window.scrollY + navbar.clientHeight + 1;
 
         sections.forEach((section, index) => {
-            const sectionTop = section.offsetTop - navbar.clientHeight;
+            const sectionTop = section.offsetTop;
             const sectionBottom = sectionTop + section.clientHeight;
 
             if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
@@ -20,12 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 navItems[index].classList.add('hero__nav-item--is-active');
             }
         });
-
-        // Verificar se estamos no topo da página (seção Home)
-        if (scrollPosition < alturaHero - navbar.clientHeight) {
-            navItems.forEach(item => item.classList.remove('hero__nav-item--is-active'));
-            navItems[0].classList.add('hero__nav-item--is-active');
-        }
     }
 
     window.addEventListener('scroll', function() {
@@ -44,6 +38,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     navToggle.addEventListener('click', function() {
         navLinks.classList.toggle('show');
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                const offsetTop = targetElement.offsetTop - navbar.clientHeight;
+
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
 
     setActiveNavItem();
