@@ -14,7 +14,6 @@ body {
     color: colors.$color-text;
     background-color: colors.$color-black;
     padding-top: 0;
-    transition: padding-top 0.2s ease-in-out;
 
     &.nav-fixed {
         padding-top: 44px; // Ajuste valor p/ altura
