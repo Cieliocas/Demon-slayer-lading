@@ -12,5 +12,11 @@ body {
     font-family: "Inter", sans-serif;
     color: colors.$color-text;
     background-color: colors.$color-black;
+    padding-top: 0;
+    transition: padding-top 0.4s ease-in-out;
+
+    &.nav-fixed {
+        padding-top: 152px; // Ajuste este valor para a altura da sua navbar
+    }
 }
 
