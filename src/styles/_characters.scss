@@ -119,7 +119,10 @@
         border-radius: 0;
 
         &__title {
-            font-size: 16px;
+            
+            &__image {
+                width: 240px;
+            }
         }
 
         &__grid {
@@ -127,8 +130,8 @@
         }
 
         &__card {
-            max-width: 180px;
-            height: 300px;
+            max-width: 250px;
+            height: 400px;
         }
     }
 }
