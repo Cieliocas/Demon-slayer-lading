@@ -90,6 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Auto-rotate every 5 seconds
-    setInterval(showNextSeason, 5000);
+    setInterval(showNextSeason, 9000);
 });
 
