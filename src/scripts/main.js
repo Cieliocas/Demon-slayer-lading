@@ -60,3 +60,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setActiveNavItem();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const seasonCards = document.querySelectorAll('.seasons__card');
+    let currentIndex = 0;
+
+    function showNextSeason() {
+        currentIndex = (currentIndex + 1) % seasonCards.length;
+        document.getElementById(`seasons-item-${currentIndex + 1}`).checked = true;
+    }
+
+    function showPrevSeason() {
+        currentIndex = (currentIndex - 1 + seasonCards.length) % seasonCards.length;
+        document.getElementById(`seasons-item-${currentIndex + 1}`).checked = true;
+    }
+
+    seasonCards.forEach((card, index) => {
+        card.addEventListener('click', () => {
+            currentIndex = index;
+        });
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') {
+            showNextSeason();
+        } else if (e.key === 'ArrowLeft') {
+            showPrevSeason();
+        }
+    });
+
+    // Auto-rotate every 5 seconds
+    setInterval(showNextSeason, 5000);
+});
+
