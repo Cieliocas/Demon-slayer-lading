@@ -54,6 +54,27 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         }
 
+        &-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba($color-primary, 0.8);
+            color: $color-text;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+
+            h3 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
         &:hover img {
             box-shadow: 0 0 30px rgba($color-secondary, 0.5);
         }
@@ -67,6 +88,10 @@
     #seasons-item-5:checked ~ .seasons__cards #seasons-song-5 {
         transform: translateX(0) translateZ(0);
         z-index: 10;
+
+        .seasons__card-caption {
+            opacity: 1;
+        }
     }
 
     #seasons-item-1:checked ~ .seasons__cards #seasons-song-2,
@@ -76,7 +101,7 @@
     #seasons-item-5:checked ~ .seasons__cards #seasons-song-1 {
         transform: translateX(50%) translateZ(-100px) rotateY(-10deg);
         z-index: 9;
-        opacity: 0.6;
+        opacity: 0.8;
     }
 
     #seasons-item-1:checked ~ .seasons__cards #seasons-song-3,
@@ -86,7 +111,7 @@
     #seasons-item-5:checked ~ .seasons__cards #seasons-song-2 {
         transform: translateX(90%) translateZ(-200px) rotateY(-20deg);
         z-index: 8;
-        opacity: 0.4;
+        opacity: 0.6;
     }
 
     #seasons-item-1:checked ~ .seasons__cards #seasons-song-4,
@@ -96,7 +121,7 @@
     #seasons-item-5:checked ~ .seasons__cards #seasons-song-3 {
         transform: translateX(-50%) translateZ(-100px) rotateY(10deg);
         z-index: 9;
-        opacity: 0.6;
+        opacity: 0.8;
     }
 
     #seasons-item-1:checked ~ .seasons__cards #seasons-song-5,
@@ -106,7 +131,7 @@
     #seasons-item-5:checked ~ .seasons__cards #seasons-song-4 {
         transform: translateX(-90%) translateZ(-200px) rotateY(20deg);
         z-index: 8;
-        opacity: 0.4;
+        opacity: 0.6;
     }
 }
 
@@ -133,10 +158,22 @@
         &__card {
             width: 300px;
             height: 420px;
+
+            &-caption {
+                padding: 10px;
+
+                h3 {
+                    font-size: 20px;
+                    margin-bottom: 5px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
         }
         &__cards {
             height: 500px;
         }
     }
 }
-
