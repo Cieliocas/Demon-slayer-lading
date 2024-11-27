@@ -11,12 +11,16 @@
     border-bottom-right-radius: 160px;
 
     &__title {
-        font-size: 48px;
+        font-size: 20px;
+        text-align: center;
         color: $color-text;
-        margin-bottom: 60px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-weight: bold;
+        margin-bottom: 40px;
+
+        &__image {
+            width: 25%;
+            margin: 0 auto;
+            display: block;
+        }
     }
 
     &__container {
