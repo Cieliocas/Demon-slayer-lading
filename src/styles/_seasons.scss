@@ -1,2 +1,95 @@
 @use 'colors' as *;
 
+.seasons {
+    &__container {
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        perspective: 1000px;
+    }
+
+    &__input {
+        display: none;
+    }
+
+    &__cards {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    &__card {
+        position: absolute;
+        width: 60%;
+        height: 100%;
+        transition: transform 0.4s ease, opacity 0.4s ease, z-index 0.4s ease;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    // Card central em destaque
+    #seasons-item-1:checked ~ .seasons__cards #seasons-song-1,
+    #seasons-item-2:checked ~ .seasons__cards #seasons-song-2,
+    #seasons-item-3:checked ~ .seasons__cards #seasons-song-3,
+    #seasons-item-4:checked ~ .seasons__cards #seasons-song-4,
+    #seasons-item-5:checked ~ .seasons__cards #seasons-song-5 {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+        z-index: 3;
+    }
+
+    #seasons-item-1:checked ~ .seasons__cards #seasons-song-2,
+    #seasons-item-2:checked ~ .seasons__cards #seasons-song-3,
+    #seasons-item-3:checked ~ .seasons__cards #seasons-song-4,
+    #seasons-item-4:checked ~ .seasons__cards #seasons-song-5,
+    #seasons-item-5:checked ~ .seasons__cards #seasons-song-1 {
+        transform: translateX(30%) scale(0.8);
+        opacity: 0.6;
+        z-index: 2;
+    }
+
+    #seasons-item-1:checked ~ .seasons__cards #seasons-song-3,
+    #seasons-item-2:checked ~ .seasons__cards #seasons-song-4,
+    #seasons-item-3:checked ~ .seasons__cards #seasons-song-5,
+    #seasons-item-4:checked ~ .seasons__cards #seasons-song-1,
+    #seasons-item-5:checked ~ .seasons__cards #seasons-song-2 {
+        transform: translateX(60%) scale(0.6);
+        opacity: 0.4;
+        z-index: 1;
+    }
+
+    #seasons-item-1:checked ~ .seasons__cards #seasons-song-5,
+    #seasons-item-2:checked ~ .seasons__cards #seasons-song-1,
+    #seasons-item-3:checked ~ .seasons__cards #seasons-song-2,
+    #seasons-item-4:checked ~ .seasons__cards #seasons-song-3,
+    #seasons-item-5:checked ~ .seasons__cards #seasons-song-4 {
+        transform: translateX(-30%) scale(0.8);
+        opacity: 0.6;
+        z-index: 2;
+    }
+
+    // Segundo card à esquerda
+    #seasons-item-1:checked ~ .seasons__cards #seasons-song-4,
+    #seasons-item-2:checked ~ .seasons__cards #seasons-song-5,
+    #seasons-item-3:checked ~ .seasons__cards #seasons-song-1,
+    #seasons-item-4:checked ~ .seasons__cards #seasons-song-2,
+    #seasons-item-5:checked ~ .seasons__cards #seasons-song-3 {
+        transform: translateX(-60%) scale(0.6);
+        opacity: 0.4;
+        z-index: 1;
+    }
+}
